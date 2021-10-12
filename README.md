@@ -1,8 +1,8 @@
 # Requirements
 
 - [x] You will create some CI task for a naked nest.js application
-- [ ] You generate a naked nest.js application using
-- [ ] Create a Dockerfile that puts your web application into an image with traefic or nginx or kong (should be executable then)
+- [x] You generate a naked nest.js application using
+- [x] Create a Dockerfile that puts your web application into an image with traefic or nginx or kong (should be executable then)
 - [ ] Add a basic unit test with a test framework of your choice
 - [ ] Add a basic integration test with a test framework of your choice
 - [ ] Create npm configuration
