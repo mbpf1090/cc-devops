@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+    backend:
+        build: ./backend
+    proxy:
+        build: ./proxy
+        ports:
+            - 80:80
