@@ -18,3 +18,5 @@ jobs:
         run: sudo ./startup.sh
       - name: Stop all containers
         run: docker-compose down
+      - name: Run unit tests
+        run: docker exec -i nest_container npm test
