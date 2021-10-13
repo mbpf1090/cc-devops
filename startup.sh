@@ -6,5 +6,5 @@ echo building backend container
 cd ./backend
 docker build --tag=nest_docker .
 
-docker-compose up
+docker-compose up -d
 echo everything done
