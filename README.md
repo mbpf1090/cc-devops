@@ -11,4 +11,4 @@
 - [ ] The image must be signed with cosign
 - [ ] The image must be scanned for vulnerabilities by tool of choice
 - [ ] The build should be green
-- [ ] The generated image must be deployed to ANY container registry
+- [x] The generated image must be deployed to ANY container registry
