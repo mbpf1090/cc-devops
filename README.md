@@ -1,4 +1,3 @@
-[![Release Docker Image CI](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-release.yml/badge.svg?branch=release)](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-release.yml)
 [![Build Docker Image CI](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-build.yml/badge.svg?branch=main)](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-build.yml)
 # Requirements
 
