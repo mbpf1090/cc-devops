@@ -18,10 +18,10 @@ jobs:
         run: docker exec -i nest_container npm test
       - name: Run jest api test
         run: docker exec -i nest_container npm run test:e2e
-      - name: install Cypress and yarn on runner
-        run: npm i cypress && npm i -g yarn
+      - name: install Cypress
+        run: npm i cypress
       - name: run Cypress tests
-        run: cd backend && yarn cy:run:ci
+        run: ./node_modules/.bin/cypress run --spec 'backend/cypress/integration/integration.spec.js' --headless
 
       - name: Stop all containers
         run: docker-compose down
