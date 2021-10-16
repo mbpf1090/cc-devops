@@ -21,8 +21,12 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
         
-      - name: copy key
-        run: printf ${{ secrets.COSIGNKEY }} > /tmp/cosign.key
+      #- name: copy key
+      #  run: printf ${{ secrets.COSIGNKEY }} > /tmp/cosign.key
+      - run: 'echo "$SSH_KEY" > /tmp/cosign.key'
+        shell: bash
+        env:
+          SSH_KEY: ${{secrets.SSH_KEY}}
         
       - name: Install Cosign
         uses: sigstore/cosign-installer@main
