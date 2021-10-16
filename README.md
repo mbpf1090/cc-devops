@@ -1,4 +1,4 @@
-[![Node.js CI](https://github.com/mbpf1090/cc-devops/actions/workflows/unit-test.yml/badge.svg)](https://github.com/mbpf1090/cc-devops/actions/workflows/unit-test.yml)
+[![Release Docker Image CI](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-release.yml/badge.svg?branch=release)](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-release.yml)
 # Requirements
 
 - [x] You will create some CI task for a naked nest.js application
@@ -7,7 +7,7 @@
 - [x] Add a basic unit test with a test framework of your choice
 - [ ] Add a basic integration test with a test framework of your choice
 - [ ] Create npm configuration
-- [ ] You then generate a CI pipeline with a gh actions
+- [x] You then generate a CI pipeline with a gh actions
 - [ ] The image must be signed with cosign
 - [ ] The image must be scanned for vulnerabilities by tool of choice
 - [ ] The build should be green
