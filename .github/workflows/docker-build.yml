@@ -19,9 +19,9 @@ jobs:
       - name: Run jest api test
         run: docker exec -i nest_container npm run test:e2e
       - name: install Cypress on runner
-        run: npm i cypress
+        run: cd backend && npm i --no-package-lock --no-save cypress
       - name: run Cypress tests
-        run: ./node_modules/.bin/cypress run --spec 'integration/integration.spec.js' --headless
+        run: ./node_modules/.bin/cypress run --spec 'cypress/integration/integration.spec.js' --headless
       - name: Stop all containers
         run: docker-compose down
 
