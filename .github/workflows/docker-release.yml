@@ -51,8 +51,10 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           
-      - name: Sign image
-        run: |
-          cosign sign -key /tmp/cosign.key ${{ steps.meta.outputs.tags }}
+      #- name: Sign image
+      #  run: |
+      #    cosign sign -key /tmp/cosign.key ${{ steps.meta.outputs.tags }}
+      - name: Sign the image pushed
+        run: echo -n "${{secrets.COSIGN_KEY_PASSPHRASE}}" | ./cosign sign -key /tmp/cosign.key ${{ steps.meta.outputs.tags }}
           
   
