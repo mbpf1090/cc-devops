@@ -49,6 +49,6 @@ jobs:
           
       - name: Sign image
         run: |
-          cosign sign -key /temp/cosign.key hub.docker.com/repository/docker/mbpf/devop:${{ steps.meta.outputs.tags }}
+          cosign sign -key /temp/cosign.key hub.docker.com/repository/docker/${{ steps.meta.outputs.tags }}
           
   
