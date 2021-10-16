@@ -16,7 +16,8 @@ describe('api integration test', () => {
       cy.request({
         method: 'GET',
         url: 'localhost:300',
-      }).should((response) => {
+        failOnStatusCode: false
+      }).then((response) => {
         expect(response.status).to.eq(404);
       });
     });
