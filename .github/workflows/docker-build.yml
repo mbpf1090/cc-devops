@@ -21,7 +21,7 @@ jobs:
       - name: install Cypress on runner
         run: cd backend && npm i --no-package-lock --no-save cypress
       - name: run Cypress tests
-        run: ./node_modules/.bin/cypress run --spec 'cypress/integration/integration.spec.js' --headless
+        run: ./backend/node_modules/.bin/cypress run --spec 'cypress/integration/integration.spec.js' --headless
       - name: Stop all containers
         run: docker-compose down
 
