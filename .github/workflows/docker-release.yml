@@ -49,6 +49,6 @@ jobs:
           
       - name: Sign image
         run: |
-          cosign sign -key /temp/cosign.key https://hub.docker.com/repository/docker/mbpf/devop:${{ github.sha }}
+          cosign sign -key /temp/cosign.key hub.docker.com/repository/docker/mbpf/devop:${{ github.sha }}
           
   
