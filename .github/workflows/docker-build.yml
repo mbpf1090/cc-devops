@@ -18,25 +18,12 @@ jobs:
         run: docker exec -i nest_container npm test
       - name: Run jest api test
         run: docker exec -i nest_container npm run test:e2e
+      - name: install Cypress and yarn on runner
+        run: npm i cypress && npm i -g yarn
+      - name: run Cypress tests
+        run: yarn cy:run:ci
+
       - name: Stop all containers
         run: docker-compose down
 
-  cypress-run:
-    runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Build the Docker image
-        run: sh ./startup.sh
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          # Specify Browser since container image is compile with Firefox
-          browser: firefox
-          spec: backend/cypress/integration/1-getting-started/todo.spec.js
-      - name: Stop all containers
-        run: docker-compose down
 
