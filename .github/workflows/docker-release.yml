@@ -22,10 +22,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: copy key
-      - run: 'echo "$SSH_KEY" > key'
-        shell: bash
-        env:
-          SSH_KEY: ${{secrets.COSIGNKEY}}
+        run: echo ${{ secrets.COSIGNKEY }} > /tmp/cosign.key
         
       - name: Install Cosign
         uses: sigstore/cosign-installer@main
