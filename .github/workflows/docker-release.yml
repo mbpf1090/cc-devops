@@ -49,6 +49,6 @@ jobs:
           
       - name: Sign image
         run: |
-          cosign sign -key /temp/cosign.key ${{ steps.meta.outputs.tags }}
+          cosign sign -key /tmp/cosign.key ${{ steps.meta.outputs.tags }}
           
   
