@@ -21,7 +21,7 @@ jobs:
       - name: install Cypress and yarn on runner
         run: npm i cypress && npm i -g yarn
       - name: run Cypress tests
-        run: yarn cy:run:ci
+        run: cd backend && yarn cy:run:ci
 
       - name: Stop all containers
         run: docker-compose down

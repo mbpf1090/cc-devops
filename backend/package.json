@@ -19,7 +19,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "cy:run": "cypress run",
-    "cy:run:ci": "cypress run"
+    "cy:run:ci": "cypress run --spec 'cypress/integration/integration.spec.js' --headless"
   },
   "dependencies": {
     "@nestjs/cli": "^8.1.1",
