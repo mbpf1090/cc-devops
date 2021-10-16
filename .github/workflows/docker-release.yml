@@ -23,7 +23,7 @@ jobs:
         
       - name: copy key
         run: |
-          cat ${{ secrets.COSIGNKEY }} > /tmp/cosign.key
+          echo ${{ secrets.COSIGNKEY }} > /tmp/cosign.key
         
       - name: Install Cosign
         uses: sigstore/cosign-installer@main
