@@ -65,6 +65,6 @@ jobs:
           
       - name: Verify sign image
         run: |
-          cosign verify --key cosign.pub ${{ steps.meta.outputs.tags }}
+          cosign verify --key /tmp/cosign.pub ${{ steps.meta.outputs.tags }}
           
   
