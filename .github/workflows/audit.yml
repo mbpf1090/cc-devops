@@ -1,0 +1,15 @@
+name: Check npm vulnerabilites
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit npm packages
+        run: cd backend/ && npm install --no-audit && npm audit --production
