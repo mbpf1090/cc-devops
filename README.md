@@ -1,4 +1,5 @@
 [![Build Docker Image CI](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-build.yml/badge.svg?branch=main)](https://github.com/mbpf1090/cc-devops/actions/workflows/docker-build.yml)
+
 # Requirements
 
 - [x] You will create some CI task for a naked nest.js application
@@ -9,6 +10,6 @@
 - [ ] Create npm configuration
 - [x] You then generate a CI pipeline with a gh actions
 - [ ] The image must be signed with cosign
-- [ ] The image must be scanned for vulnerabilities by tool of choice
+- [x] The image must be scanned for vulnerabilities by tool of choice
 - [x] The build should be green
 - [x] The generated image must be deployed to ANY container registry
