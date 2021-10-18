@@ -2,18 +2,27 @@ name: Test Docker CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
         run: sudo ./startup.sh
+
+        # https://github.com/marketplace/actions/anchore-container-scan
+      - name: Scan image
+        uses: anchore/scan-action@v3
+        with:
+          image: "cc-devops_proxy:latest"
+          fail-build: false
+          # fail-build: true
+          # severity-cutoff: critical
+
       - name: Run jest unit tests
         run: docker exec -i nest_container npm test
       - name: Run jest api test
@@ -24,5 +33,3 @@ jobs:
         run: cd backend && ./node_modules/.bin/cypress run --spec 'cypress/integration/integration.spec.js' --headless
       - name: Stop all containers
         run: docker-compose down
-
-
