@@ -4,12 +4,9 @@
 # Cloud Computing Devops FH Technikum WS 21/22
 
 This repository is part of the Docker/CI assignment.
-## APP
 It contains a nest.js backend server and a nginx proxy server.
-## Docker
 For both a docker image will be generated.
-## CI
-There are two CI pipelines:
+Two CI pipelines have been implemented:
 - Main
 - Release
 
@@ -20,7 +17,7 @@ These consist of:
 - Basic unit test with Jest
 - Basic integration test with Cypress
 
-## Release branch
+## RELEASE branch
 The release branch contains the unit/integration tests as well as:
 - Pushing the docker image to Docker Hub, if the build succeeds
 - Signing the image with Cosign and pushing the signature to Docker Hub
