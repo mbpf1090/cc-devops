@@ -1,10 +1,10 @@
 version: '3.8'
 
 services:
-    backend:
+    backend: # example where build is done manually / by script
         container_name: nest_container
         image: nest_docker
     proxy:
-        build: ./proxy
+        build: ./proxy # example where build is done by docker compose
         ports:
             - 80:80
